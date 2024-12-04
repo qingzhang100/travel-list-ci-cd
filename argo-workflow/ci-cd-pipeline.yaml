@@ -25,7 +25,7 @@ spec:
           [
             "git",
             "clone",
-            "https://github.com/your-repo/your-react-app.git",
+            "https://github.com/qingzhang100/travel-list-ci-cd.git",
             "/src",
           ]
 
@@ -33,7 +33,7 @@ spec:
       container:
         image: docker
         command:
-          ["docker", "build", "-t", "your-repo/your-react-app:latest", "/src"]
+          ["docker", "build", "-t", "qingzhang100/react-app:latest", "/src"]
 
     - name: run-tests
       container:
@@ -44,7 +44,7 @@ spec:
     - name: docker-push
       container:
         image: docker
-        command: ["docker", "push", "your-repo/your-react-app:latest"]
+        command: ["docker", "push", "qingzhang100/react-app:latest"]
 
     - name: deploy-k8s
       container:
